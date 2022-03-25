@@ -1,0 +1,32 @@
+@model Fale
+@{
+    ViewData["Title"] = "Alteração do Fale Conosco";
+}
+<br>
+<div class="titulo">
+    <h4>Fale Conosco</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<form method="POST" asp-action="Editar">
+
+    <input type="hidden" asp-for="Id">
+    <p>
+        <label asp-for="Nome">Nome: </label>
+        <input asp-for="Nome">
+    </p>
+    <p>
+        <label asp-for="Email">E-mail:</label>
+        <input asp-for="Email">
+    </p>
+    <p>
+        <label asp-for="Mensagem">Mensagem:</label>
+        <input asp-for="Mensagem">
+    </p>
+    <p>
+        <a href="Listagem"><button>SALVAR</button></a>
+    </p>
+</form>

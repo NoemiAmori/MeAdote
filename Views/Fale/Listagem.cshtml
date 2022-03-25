@@ -1,0 +1,36 @@
+@model List<Fale>
+
+@{
+    ViewData["Title"] = "Listagem do Fale Conosco";
+}
+<br>
+<div class="titulo">
+    <h4>Lista do Fale Conosco</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>E-mail</td>
+        <td>Mensagem</td>
+        <td>Operações</td>
+    </tr>
+    @foreach (Fale f in Model)
+    {
+        <tr>
+        <td>@f.Id</td>
+        <td>@f.Nome</td>
+        <td>@f.Email</td>
+        <td>@f.Mensagem</td>
+        <td>
+            <a href="/Fale/Editar?Id=@f.Id">Alterar</a> |
+            <a href="/Fale/Excluir?Id=@f.Id">Remover</a> 
+        </td>
+    </tr>
+    }
+</table>

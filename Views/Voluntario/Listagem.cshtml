@@ -1,0 +1,40 @@
+@model List<Voluntario>
+
+@{
+    ViewData["Title"] = "Listagem de Voluntários";
+}
+<br>
+<div class="titulo">
+    <h4>Lista de Voluntário</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>E-mail</td>
+        <td>Telefone</td>
+        <td>Data de Nascimento</td>
+        <td>Sexo</td>
+        <td>Operações</td>
+    </tr>
+    @foreach (Voluntario v in Model)
+    {
+        <tr>
+        <td>@v.Id</td>
+        <td>@v.Nome</td>
+        <td>@v.Email</td>
+        <td>@v.Telefone</td>
+        <td>@v.DataNascimento.ToShortDateString()</td>
+        <td>@v.Sexo</td>
+        <td>
+            <a href="/Voluntario/Editar?Id=@v.Id">Alterar</a> |
+            <a href="/Voluntario/Excluir?Id=@v.Id">Remover</a> 
+        </td>
+    </tr>
+    }
+</table>

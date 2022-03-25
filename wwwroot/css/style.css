@@ -1,0 +1,113 @@
+﻿* {box-sizing: border-box;}
+
+.slide-container
+{
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.dot-container
+{
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+}
+
+/*
+.meusSlides
+{
+  display: none;
+}*/
+
+.qtslides
+{
+  font-size: 10px;
+  color: white;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.text
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 8px 8px;
+}
+
+.dot
+{
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  display: inline-block;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+.prev, .next
+{
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev:hover, .next:hover
+{
+  background-color: rgba(0, 0, 0, 0.5);  
+}
+
+.next{
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.active, .dot:hover
+{
+  background-color: gray;
+}
+
+.titulo
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: cornflowerblue;
+  text-align: center;
+}
+
+.msg-erro
+{
+  color: red;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.p
+{
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}

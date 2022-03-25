@@ -1,0 +1,48 @@
+@model List<Adocao>
+
+@{
+    ViewData["Title"] = "Listagem de Adoção";
+}
+<br>
+<div class="titulo">
+    <h4>Lista de Adoção</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<table class="table">
+    <tr>
+        <td>Id</td>
+        <td>Nome</td>
+        <td>E-mail</td>
+        <td>Telefone</td>
+        <td>Data de Nascimento</td>
+        <td>Endereço</td>
+        <td>Cidade</td>
+        <td>Estado</td>
+        <td>CEP</td>
+        <td>Animal</td>
+        <td>Operações</td>
+    </tr>
+    @foreach (Adocao a in Model)
+    {
+        <tr>
+        <td>@a.Id</td>
+        <td>@a.Nome</td>
+        <td>@a.Email</td>
+        <td>@a.Telefone</td>
+        <td>@a.DataNascimento</td>
+        <td>@a.Endereco</td>
+        <td>@a.Cidade</td>
+        <td>@a.Estado</td>
+        <td>@a.Cep</td>
+        <td>@a.Animal</td>
+        <td>
+            <a href="/Adocao/Editar?Id=@a.Id">Alterar</a> |
+            <a href="/Adocao/Excluir?Id=@a.Id">Remover</a> 
+        </td>
+    </tr>
+    }
+</table>

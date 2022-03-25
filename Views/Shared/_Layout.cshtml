@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Me Adote</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Home"
+                                    asp-action="Index">HOME</a>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Home"
+                                    asp-action="Somos">QUEM
+                                    SOMOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Adocao"
+                                    asp-action="Pets">PETS PARA
+                                    ADOÇÃO</a></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Voluntario"
+                                    asp-action="Cadastro">SEJA
+                                    VOLUNTÁRIO</a></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Fale"
+                                    asp-action="Cadastro">FALE
+                                    CONOSCO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Me Adote - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

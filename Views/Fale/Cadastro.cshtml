@@ -1,0 +1,36 @@
+@model Fale
+@{
+    ViewData["Title"] = "Cadastro do Fale Conosco";
+}
+<br>
+<div class="titulo">
+    <h4>Fale Conosco</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<form action="Cadastro" method="POST" name="formFale" onsubmit="return validaFale()">
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="lblnome">Nome:</label>
+            <input type="text" name="txtnome" id="txtnome">
+            <span class="msg-erro msg-nome"></span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="lblemail">E-mail:</label>
+            <input type="text" name="txtemail" id="txtemail">
+            <span class="msg-erro msg-email"></span>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label for="lblmensagem">Mensagem:</label>
+            <textarea id="txtmensagem"></textarea>
+            <span class="msg-erro msg-mensagem"></span>
+        </div>
+    </div>
+        <center><button type="submit" class="btn btn-primary">CADASTRAR</button></center>
+</form>

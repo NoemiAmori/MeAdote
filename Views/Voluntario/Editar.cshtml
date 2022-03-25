@@ -1,0 +1,41 @@
+@model Voluntario
+@{
+    ViewData["Title"] = "Alteração do cadastro de Voluntários";
+}
+<br>
+<div class="titulo">
+    <h4>Seja Voluntário</h4>
+</div>
+
+<center>
+    <img src="/imagens/somos.jpg" alt="caes e gatos">
+</center>
+
+<form method="POST" asp-action="Editar">
+
+    <input type="hidden" asp-for="Id">
+    <p>
+        <label asp-for="Nome">Nome: </label>
+        <input asp-for="Nome">
+    </p>
+    <p>
+        <label asp-for="Email">E-mail:</label>
+        <input asp-for="Email">
+    </p>
+    <p>
+        <label asp-for="Telefone">Telefone:</label>
+        <input asp-for="Telefone">
+    </p>
+    <p>
+        <label asp-for="DataNascimento">Data de Nascimento:</label>
+        <input asp-for="DataNascimento" type="date">
+    </p>
+    <p>
+        <label asp-for="Sexo">Sexo:</label>
+        <input asp-for="Sexo" type="radio" value="Feminino"> Feminino
+        <input asp-for="Sexo" type="radio" value="Masculino"> Masculino
+    </p>
+    <p>
+        <a href="Listagem"><button>SALVAR</button></a>
+    </p>
+</form>
