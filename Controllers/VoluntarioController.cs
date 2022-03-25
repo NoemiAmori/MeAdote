@@ -16,43 +16,51 @@ namespace Meadote.Controllers
             
             return View();
         }
-        //editar
-        public IActionResult Editar(int Id)
-        {
-            VoluntarioRepository vr = new VoluntarioRepository();
-            Voluntario volEncontrado = vr.BuscarPorId(Id);
-            return View(volEncontrado);
-        }
+
         [HttpPost]
-        public IActionResult Editar(Voluntario vol)
+
+        public IActionResult Cadastro (Voluntario v)
         {
-            VoluntarioRepository vr = new VoluntarioRepository();
-            vr.Editar(vol);
-            return RedirectToAction("Listagem","Voluntario");
+            VoluntarioService voluntarioService = new VoluntarioService ();
+
+            if (v.Id == 0)
+            {
+                voluntarioService.Inserir(v);
+            }
+            else
+            {
+                voluntarioService.Atualizar(v);
+            }
+
+            return RedirectToAction ("Listagem");
         }
 
-        //excluir
-        public IActionResult Excluir(int Id)
+        public IActionResult Listagem (string tipoFiltro, string filtro)
         {
-            VoluntarioRepository vr = new VoluntarioRepository();
-            Voluntario volEncontrado = vr.BuscarPorId(Id);
-            vr.Excluir(volEncontrado);//metodo excluir recebe objeto
-            return RedirectToAction ("Listagem","Voluntario");
+            FiltrosVoluntario objFiltro = null;
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                objFiltro = new FiltrosVoluntario();
+                objFiltro.Filtro = filtro;
+                objFiltro.TipoFiltro = tipoFiltro;
+            }
+            VoluntarioService voluntarioService = new VoluntarioService();
+            return View (voluntarioService.ListarTodos(objFiltro));
         }
-             
-        [HttpPost]
-        public IActionResult Cadastro(Voluntario vol)
+
+        public IActionResult Edicao (int id)
         {
-            VoluntarioRepository vr = new VoluntarioRepository();
-            vr.Cadastrar(vol);
-            return RedirectToAction("Listagem","Voluntario");
+            VoluntarioService vs = new VoluntarioService();
+            Voluntario v = vs.ObterPorId(id);
+            return View (v);
         }
-        
-        public IActionResult Listagem()
+
+        public IActionResult Excluir (int id)
         {
-            VoluntarioRepository vr = new VoluntarioRepository();
-            List<Voluntario> Lista = vr.Listar();
-            return View(Lista);
+            VoluntarioService vs = new VoluntarioService();
+            Voluntario v = vs.ObterPorId(id);
+
+            return View (v);
         }
     }
 }

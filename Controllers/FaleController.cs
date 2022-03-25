@@ -16,43 +16,49 @@ namespace Meadote.Controllers
             
             return View();
         }
-        //editar
-        public IActionResult Editar(int Id)
-        {
-            FaleRepository fr = new FaleRepository();
-            Fale flEncontrado = fr.BuscarPorId(Id);
-            return View(flEncontrado);
-        }
+
         [HttpPost]
-        public IActionResult Editar(Fale fl)
+        public IActionResult Cadastro (Fale f)
         {
-            FaleRepository fr = new FaleRepository();
-            fr.Editar(fl);
-            return RedirectToAction("Listagem","Fale");
+            FaleService faleService = new FaleService();
+
+            if(f.Id == 0)
+            {
+                faleService.Inserir(f);
+            }
+            else
+            {
+                faleService.Atualizar(f);
+            }
+            return RedirectToAction("Listagem");
         }
 
-        //excluir
-        public IActionResult Excluir(int Id)
+        public IActionResult Listagem (string tipoFiltro, string filtro)
         {
-            FaleRepository fr = new FaleRepository();
-            Fale flEncontrado = fr.BuscarPorId(Id);
-            fr.Excluir(flEncontrado);//metodo excluir recebe objeto
-            return RedirectToAction ("Listagem","Fale");
+            FiltrosFale objFiltro = null;
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                objFiltro = new FiltrosFale();
+                objFiltro.Filtro = filtro;
+                objFiltro.TipoFiltro = tipoFiltro;
+            }
+            FaleService faleService = new FaleService();
+            return View (faleService.ListarTodos(objFiltro));
         }
-             
-        [HttpPost]
-        public IActionResult Cadastro(Fale fl)
+
+        public IActionResult Edicao (int id)
         {
-            FaleRepository fr = new FaleRepository();
-            fr.Cadastrar(fl);
-            return RedirectToAction("Listagem","Fale");
+            FaleService fs = new FaleService();
+            Fale f = fs.ObterPorId(id);
+            return View(f);
         }
-        
-        public IActionResult Listagem()
+
+        public IActionResult Excluir (int id)
         {
-            FaleRepository fl = new FaleRepository();
-            List<Fale> Lista = fl.Listar();
-            return View(Lista);
+            FaleService fs = new FaleService();
+            Fale f = fs.ObterPorId(id);
+
+            return View (f);
         }
     }
 }

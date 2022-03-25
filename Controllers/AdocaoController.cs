@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Meadote.Models;
 
 namespace Meadote.Controllers
@@ -21,42 +15,51 @@ namespace Meadote.Controllers
             
             return View();
         }
-        //editar
-        public IActionResult Editar(int Id)
-        {
-            AdocaoRepository ar = new AdocaoRepository();
-            Adocao adEncontrado = ar.BuscarPorId(Id);
-            return View(adEncontrado);
-        }
+
         [HttpPost]
-        public IActionResult Editar(Adocao ad)
+        public IActionResult Cadastro (Adocao a)
         {
-            AdocaoRepository ar = new AdocaoRepository();
-            ar.Editar(ad);
-            return RedirectToAction("Listagem","Adocao");
+            AdocaoService adocaoService = new AdocaoService();
+            
+            if (a.Id == 0)
+            {
+                adocaoService.Inserir(a);
+            }
+            else
+            {
+                adocaoService.Atualizar(a);
+            }
+
+            return RedirectToAction ("Listagem");
         }
 
-        //excluir
-        public IActionResult Excluir(int Id)
+        public IActionResult Listagem (string tipoFiltro, string filtro)
         {
-            AdocaoRepository ar = new AdocaoRepository();
-            Adocao adEncontrdo = ar.BuscarPorId(Id);
-            ar.Excluir(adEncontrdo);//metodo excluir recebe objeto
-            return RedirectToAction ("Listagem","Adocao");
+            FiltrosAdocao objFiltro = null;
+            if (!string.IsNullOrEmpty(filtro))
+            {
+                objFiltro = new FiltrosAdocao();
+                objFiltro.Filtro = filtro;
+                objFiltro.TipoFiltro = tipoFiltro;
+            }
+            AdocaoService adocaoService = new AdocaoService();
+            return View (adocaoService.ListarTodos(objFiltro));
         }
-             
-        [HttpPost]
-        public IActionResult Cadastro(Adocao ad)
+
+        //editar
+        public IActionResult Editar(int id)
         {
-            AdocaoRepository ar = new AdocaoRepository();
-            ar.Cadastrar(ad);
-            return RedirectToAction("Listagem","Adocao");
-        }
-        public IActionResult Listagem()
+            AdocaoService adocaoService = new AdocaoService();
+            Adocao a = adocaoService.ObterPorId(id);
+            return View(a);
+        }  
+
+        public IActionResult Excluir (int id)
         {
-            AdocaoRepository ar = new AdocaoRepository();
-            List<Adocao> Lista = ar.Listar();
-            return View(Lista);
+            AdocaoService asv = new AdocaoService();
+            Adocao a = asv.ObterPorId(id);
+
+            return View (a);
         }
     }
 }

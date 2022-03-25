@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET05_PI\\Meadote\\Meadote.csproj": {}
+    "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Meadote.csproj": {}
   },
   "projects": {
-    "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET05_PI\\Meadote\\Meadote.csproj": {
+    "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Meadote.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET05_PI\\Meadote\\Meadote.csproj",
+        "projectUniqueName": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Meadote.csproj",
         "projectName": "Meadote",
-        "projectPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET05_PI\\Meadote\\Meadote.csproj",
+        "projectPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Meadote.csproj",
         "packagesPath": "C:\\Users\\noemi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET05_PI\\Meadote\\obj\\",
+        "outputPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\noemi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -36,9 +36,15 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "MySqlConnector": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.3.13, )"
+              "version": "[3.1.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.2, )"
             }
           },
           "imports": [

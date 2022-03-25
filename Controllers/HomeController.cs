@@ -20,6 +20,7 @@ namespace Meadote.Controllers
 
         public IActionResult Index()
         {
+            VoluntarioService vs = new VoluntarioService();
             return View();
         }
 
