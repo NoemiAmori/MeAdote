@@ -7,20 +7,20 @@ namespace Meadote.Controllers
     {
         public IActionResult Pets()
         {
-            
+
             return View();
         }
         public IActionResult Cadastro()
         {
-            
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastro (Adocao a)
+        public IActionResult Cadastro(Adocao a)
         {
             AdocaoService adocaoService = new AdocaoService();
-            
+
             if (a.Id == 0)
             {
                 adocaoService.Inserir(a);
@@ -30,10 +30,10 @@ namespace Meadote.Controllers
                 adocaoService.Atualizar(a);
             }
 
-            return RedirectToAction ("Listagem");
+            return RedirectToAction("Listagem");
         }
 
-        public IActionResult Listagem (string tipoFiltro, string filtro)
+        public IActionResult Listagem(string tipoFiltro, string filtro)
         {
             FiltrosAdocao objFiltro = null;
             if (!string.IsNullOrEmpty(filtro))
@@ -43,7 +43,7 @@ namespace Meadote.Controllers
                 objFiltro.TipoFiltro = tipoFiltro;
             }
             AdocaoService adocaoService = new AdocaoService();
-            return View (adocaoService.ListarTodos(objFiltro));
+            return View(adocaoService.ListarTodos(objFiltro));
         }
 
         //editar
@@ -52,14 +52,23 @@ namespace Meadote.Controllers
             AdocaoService adocaoService = new AdocaoService();
             Adocao a = adocaoService.ObterPorId(id);
             return View(a);
-        }  
+        }
 
-        public IActionResult Excluir (int id)
+        public IActionResult Remover (int Id)
         {
             AdocaoService asv = new AdocaoService();
-            Adocao a = asv.ObterPorId(id);
+            Adocao a = asv.ObterPorId(Id);
 
-            return View (a);
+            return View(a);        
+        }
+
+        [HttpPost]
+        public IActionResult Remover (Adocao a)
+        {
+            AdocaoService asv = new AdocaoService();
+            asv.Deletar(a);
+
+            return RedirectToAction ("Listagem");
         }
     }
 }

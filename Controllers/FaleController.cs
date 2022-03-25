@@ -46,19 +46,11 @@ namespace Meadote.Controllers
             return View (faleService.ListarTodos(objFiltro));
         }
 
-        public IActionResult Edicao (int id)
+        public IActionResult Editar (int id)
         {
-            FaleService fs = new FaleService();
-            Fale f = fs.ObterPorId(id);
+            FaleService faleService = new FaleService();
+            Fale f = faleService.ObterPorId(id);
             return View(f);
-        }
-
-        public IActionResult Excluir (int id)
-        {
-            FaleService fs = new FaleService();
-            Fale f = fs.ObterPorId(id);
-
-            return View (f);
         }
     }
 }

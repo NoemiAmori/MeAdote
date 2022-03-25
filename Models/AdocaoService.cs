@@ -75,5 +75,22 @@ namespace Meadote.Models
                 return mc.Adocaos.Find(Id);
             }
         }
+
+        public Adocao ListarId (int Id)
+        {
+            using (MeadoteContext mc = new MeadoteContext())
+            {
+                return (mc.Adocaos.Find(Id));
+            }
+        }
+
+        public void Deletar (Adocao a)
+        {
+            using (MeadoteContext mc = new MeadoteContext())
+            {
+                mc.Remove(a);
+                mc.SaveChanges();
+            }
+        }
     }
 }

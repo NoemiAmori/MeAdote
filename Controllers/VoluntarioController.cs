@@ -48,10 +48,10 @@ namespace Meadote.Controllers
             return View (voluntarioService.ListarTodos(objFiltro));
         }
 
-        public IActionResult Edicao (int id)
+        public IActionResult Editar (int id)
         {
-            VoluntarioService vs = new VoluntarioService();
-            Voluntario v = vs.ObterPorId(id);
+            VoluntarioService voluntarioService = new VoluntarioService();
+            Voluntario v = voluntarioService.ObterPorId(id);
             return View (v);
         }
 

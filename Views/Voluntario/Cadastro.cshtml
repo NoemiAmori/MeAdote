@@ -11,39 +11,39 @@
     <img src="/imagens/somos.jpg" alt="caes e gatos">
 </center>
 
-<form method="POST" action="Cadastro" name="formVolutario" onsubmit="return validaVoluntario()">
+<div class="row justify-content-md-center">
+    <form method="POST" asp-action="Cadastro" class="col-md-4">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Nome">Nome:</label>
+                <input asp-for="Nome" class="form-control" required/>
+            </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="lblnome">Nome:</label>
-            <input type="text" name="txtnome" id="txtnome">
-            <span class="msg-erro msg-nome"></span>
+            <div class="form-group col-md-6">
+                <label asp-for="Email">E-mail:</label>
+                <input asp-for="Email" class="form-control" required/>
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="lblemail">E-mail:</label>
-            <input type="text" name="txtemail" id="txtemail">
-            <span class="msg-erro msg-email"></span>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label asp-for="Telefone">Telefone:</label>
+                <input asp-for="Telefone" class="form-control" required/>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="DataNascimento">Data de Nascimento:</label>
+                <input asp-for="DataNascimento" class="form-control" required/>
+            </div>
         </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="lbltelefone">Telefone:</label>
-            <input type="text" name="txttelefone" id="txttelefone">
-            <span class="msg-erro msg-telefone"></span>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <label asp-for="Sexo">Sexo:</label>
+                <input asp-for="Sexo" type="radio" value="Feminino"> Feminino
+                <input asp-for="Sexo" type="radio" value="Masculino"> Masculino
+            </div>
         </div>
-        <div class="form-group col-md-6">
-            <label for="lbldatanascimento">Data de Nascimento:</label>
-            <input type="date" name="txtdatanascimento" id="txtdatanascimento">
-            <span class="msg-erro msg-datanascimento"></span>
-        </div>
-    </div>
-    <div class="form-group col-md-6">
-        <label for="Sexo">Sexo:</label>
-        <input type="radio" name="txtsexo" id="txtsexo" value="Feminino"> Feminino
-        <input type="radio" name="txtsexo" id="txtsexo" value="Masculino"> Masculino
-        <span class="msg-erro msg-sexo"></span>
-    </div>
-    <p>
+
         <center><button type="submit" class="btn btn-primary">CADASTRAR</button></center>
-    </p>
-</form>
+    </form>
+</div>

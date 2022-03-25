@@ -114,3 +114,4 @@ C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET06_PI\
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET06_PI\Meadote\obj\Debug\netcoreapp3.1\Meadote.dll
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET06_PI\Meadote\obj\Debug\netcoreapp3.1\Meadote.pdb
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET06_PI\Meadote\obj\Debug\netcoreapp3.1\Meadote.genruntimeconfig.cache
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET06_PI\Meadote\obj\Debug\netcoreapp3.1\Razor\Views\Adocao\Remover.cshtml.g.cs

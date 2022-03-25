@@ -14457,6 +14457,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Views\\Adocao\\Remover.cshtml",
+      "TargetPath": "Views\\Adocao\\Remover.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Views\\Adocao\\Editar.cshtml",
       "TargetPath": "Views\\Adocao\\Editar.cshtml",
       "FileKind": "mvc"
