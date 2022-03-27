@@ -12,28 +12,59 @@
     <img src="/imagens/somos.jpg" alt="caes e gatos">
 </center>
 
-<table class="table">
-    <tr>
-        <td>Id</td>
-        <td>Nome</td>
-        <td>E-mail</td>
-        <td>Telefone</td>
-        <td>Data de Nascimento</td>
-        <td>Sexo</td>
-        <td>Operações</td>
-    </tr>
-    @foreach (Voluntario v in Model)
-    {
-        <tr>
-        <td>@v.Id</td>
-        <td>@v.Nome</td>
-        <td>@v.Email</td>
-        <td>@v.Telefone</td>
-        <td>@v.DataNascimento.ToShortDateString()</td>
-        <td>@v.Sexo</td>
-        <td>
-            <a href="/Voluntario/Editar?Id=@v.Id">Alterar</a>
-        </td>
-    </tr>
-    }
-</table>
+<div class="row">
+    <div class="col-md-12">
+        <form class="form-inline" method="POST">
+            <div class="form-group mb-2">
+                <select name="TipoFiltro" class="form-control">
+                    <option value="Nome">Nome</option>
+                    <option value="Sexo">Sexo</option>
+                </select>
+            </div>
+            <div class="form-group mb-2 mx-sm-3">
+                <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        @if (Model.Count > 0)
+        {
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Nome</td>
+                        <td>E-mail</td>
+                        <td>Telefone</td>
+                        <td>Data de Nascimento</td>
+                        <td>Sexo</td>
+                        <td>Operações</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (Voluntario v in Model)
+                    {
+                        <tr>
+                            <td>@v.Id</td>
+                            <td>@v.Nome</td>
+                            <td>@v.Email</td>
+                            <td>@v.Telefone</td>
+                            <td>@v.DataNascimento.ToShortDateString()</td>
+                            <td>@v.Sexo</td>
+                            <td><a class="font-weight-bold link-primary" href="/Voluntario/Editar?Id=@v.Id">Alterar</a></td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <p>Nenhum registro encontrado!</p>
+        }
+    </div>
+</div>

@@ -41,7 +41,7 @@ namespace Meadote.Models
                     switch (filtro.TipoFiltro)
                     {
                         case "Nome":
-                            query = mc.Fales.Where(f => f.Nome.Contains(filtro.Filtro));
+                            query = mc.Fales.Where(f => f.Nome.ToLower().Contains(filtro.Filtro.ToLower()));
                         break;
 
                         default:

@@ -47,11 +47,11 @@ namespace Meadote.Models
                     switch (filtro.TipoFiltro)
                     {
                         case "Nome":
-                            query = mc.Adocaos.Where(a => a.Nome.Contains(filtro.Filtro));
+                            query = mc.Adocaos.Where(a => a.Nome.ToLower().Contains(filtro.Filtro.ToLower()));
                         break;
 
                         case "Animal":
-                            query = mc.Adocaos.Where(a => a.Animal.Contains(filtro.Filtro));
+                            query = mc.Adocaos.Where(a => a.Animal.ToLower().Contains(filtro.Filtro.ToLower()));
                         break;
 
                         default:

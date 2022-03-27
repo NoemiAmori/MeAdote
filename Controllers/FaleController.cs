@@ -33,7 +33,7 @@ namespace Meadote.Controllers
             return RedirectToAction("Listagem");
         }
 
-        public IActionResult Listagem (string tipoFiltro, string filtro)
+        public IActionResult Listagem (string tipoFiltro, string filtro, string itensPorPagina, int numPagina, int paginaAtual)
         {
             FiltrosFale objFiltro = null;
             if (!string.IsNullOrEmpty(filtro))
@@ -42,6 +42,9 @@ namespace Meadote.Controllers
                 objFiltro.Filtro = filtro;
                 objFiltro.TipoFiltro = tipoFiltro;
             }
+            ViewData["falePorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : int.Parse(itensPorPagina));
+                ViewData["paginaAtual"] = (paginaAtual != 0 ? paginaAtual : 1);
+
             FaleService faleService = new FaleService();
             return View (faleService.ListarTodos(objFiltro));
         }
