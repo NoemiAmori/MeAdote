@@ -13,29 +13,36 @@ namespace Meadote.Controllers
     {
         public IActionResult Cadastro()
         {
-            
             return View();
         }
 
         [HttpPost]
 
-        public IActionResult Cadastro (Voluntario v)
+        public IActionResult Cadastro(Voluntario v)
         {
-            VoluntarioService voluntarioService = new VoluntarioService ();
-
-            if (v.Id == 0)
+            if (!string.IsNullOrEmpty(v.Nome) && !string.IsNullOrEmpty(v.Telefone) && !string.IsNullOrEmpty(v.Email))
             {
-                voluntarioService.Inserir(v);
+                VoluntarioService vs = new VoluntarioService();
+
+                if (v.Id == 0)
+                {
+                    vs.Inserir(v);
+                }
+                else
+                {
+                    vs.Atualizar(v);
+                }
+
+                return RedirectToAction("Listagem");
             }
             else
             {
-                voluntarioService.Atualizar(v);
+                ViewData["Mensagem"] = "Preencha todos os campos";
+                return View();
             }
-
-            return RedirectToAction ("Listagem");
         }
 
-        public IActionResult Listagem (string tipoFiltro, string filtro)
+        public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)
         {
             FiltrosVoluntario objFiltro = null;
             if (!string.IsNullOrEmpty(filtro))
@@ -44,23 +51,19 @@ namespace Meadote.Controllers
                 objFiltro.Filtro = filtro;
                 objFiltro.TipoFiltro = tipoFiltro;
             }
-            VoluntarioService voluntarioService = new VoluntarioService();
-            return View (voluntarioService.ListarTodos(objFiltro));
+
+            ViewData["voluntariosPorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : int.Parse(itensPorPagina));
+            ViewData["PaginaAtual"] = (PaginaAtual != 0 ? PaginaAtual : 1);
+
+            VoluntarioService vs = new VoluntarioService();
+            return View(vs.ListarTodos(objFiltro));
         }
 
-        public IActionResult Editar (int id)
-        {
-            VoluntarioService voluntarioService = new VoluntarioService();
-            Voluntario v = voluntarioService.ObterPorId(id);
-            return View (v);
-        }
-
-        public IActionResult Excluir (int id)
+        public IActionResult Editar(int id)
         {
             VoluntarioService vs = new VoluntarioService();
             Voluntario v = vs.ObterPorId(id);
-
-            return View (v);
+            return View(v);
         }
     }
 }

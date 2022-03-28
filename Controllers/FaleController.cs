@@ -13,27 +13,33 @@ namespace Meadote.Controllers
     {
         public IActionResult Cadastro()
         {
-            
             return View();
         }
 
         [HttpPost]
-        public IActionResult Cadastro (Fale f)
+        public IActionResult Cadastro(Fale f)
         {
-            FaleService faleService = new FaleService();
-
-            if(f.Id == 0)
+            if (!string.IsNullOrEmpty(f.Nome) && !string.IsNullOrEmpty(f.Email))
             {
-                faleService.Inserir(f);
+                FaleService faleService = new FaleService();
+
+                if (f.Id == 0)
+                {
+                    faleService.Inserir(f);
+                }
+                else
+                {
+                    faleService.Atualizar(f);
+                }
+                return RedirectToAction("Listagem");
             }
             else
             {
-                faleService.Atualizar(f);
+                ViewData["Mensagem"] = "Preencha todos os campos";
+                return View();
             }
-            return RedirectToAction("Listagem");
         }
-
-        public IActionResult Listagem (string tipoFiltro, string filtro, string itensPorPagina, int numPagina, int paginaAtual)
+        public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)
         {
             FiltrosFale objFiltro = null;
             if (!string.IsNullOrEmpty(filtro))
@@ -42,14 +48,15 @@ namespace Meadote.Controllers
                 objFiltro.Filtro = filtro;
                 objFiltro.TipoFiltro = tipoFiltro;
             }
+
             ViewData["falePorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : int.Parse(itensPorPagina));
-                ViewData["paginaAtual"] = (paginaAtual != 0 ? paginaAtual : 1);
+            ViewData["PaginaAtual"] = (PaginaAtual != 0 ? PaginaAtual : 1);
 
             FaleService faleService = new FaleService();
-            return View (faleService.ListarTodos(objFiltro));
+            return View(faleService.ListarTodos(objFiltro));
         }
 
-        public IActionResult Editar (int id)
+        public IActionResult Editar(int id)
         {
             FaleService faleService = new FaleService();
             Fale f = faleService.ObterPorId(id);

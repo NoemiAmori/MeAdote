@@ -2,6 +2,10 @@
 
 @{
     ViewData["Title"] = "Listagem de Voluntários";
+    int FiltroPorPag = Int32.Parse(ViewData["voluntariosPorPagina"].ToString());
+    int PaginaAtual = Int32.Parse(ViewData["PaginaAtual"].ToString());
+    int NumVoluntariosPorPag = (Model.Count < FiltroPorPag ? Model.Count : FiltroPorPag);
+    int NumTotaldePag = Model.Count / NumVoluntariosPorPag + (Model.Count % NumVoluntariosPorPag == 0 ? 0 : 1);
 }
 <br>
 <div class="titulo">
@@ -24,14 +28,33 @@
             <div class="form-group mb-2 mx-sm-3">
                 <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
             </div>
+
+            <div>
+                <select name="itensPorPagina" id="itensPorPagina">
+                    <option value="05">05 Voluntários</option>
+                    <option value="10">10 Voluntários</option>
+                    <option value="15">15 Voluntários</option>
+                    <option value="20">20 Voluntários</option>
+                    <option value="@Model.Count">Todos</option>
+                </select>
+            </div>
+
             <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+
+            <div id="SeletorPaginas">
+            <span>Página:</span>
+            @for (int i=1; i<=NumTotaldePag; i++)
+            {
+                <span><a href="/Voluntario/Listagem?PaginaAtual=@i">@i / </a></span>
+            }
+        </div>
         </form>
     </div>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        @if (Model.Count > 0)
+        @if (Model.Count != 0)
         {
             <table class="table table-striped">
                 <thead>
@@ -47,16 +70,16 @@
                 </thead>
 
                 <tbody>
-                    @foreach (Voluntario v in Model)
+                    @for (int i = (PaginaAtual-1)*NumVoluntariosPorPag; i<(NumVoluntariosPorPag*PaginaAtual<Model.Count?NumVoluntariosPorPag*PaginaAtual:Model.Count);i++)
                     {
                         <tr>
-                            <td>@v.Id</td>
-                            <td>@v.Nome</td>
-                            <td>@v.Email</td>
-                            <td>@v.Telefone</td>
-                            <td>@v.DataNascimento.ToShortDateString()</td>
-                            <td>@v.Sexo</td>
-                            <td><a class="font-weight-bold link-primary" href="/Voluntario/Editar?Id=@v.Id">Alterar</a></td>
+                            <td>@Model[i].Id</td>
+                            <td>@Model[i].Nome</td>
+                            <td>@Model[i].Email</td>
+                            <td>@Model[i].Telefone</td>
+                            <td>@Model[i].DataNascimento.ToShortDateString()</td>
+                            <td>@Model[i].Sexo</td>
+                            <td><a class="font-weight-bold link-primary" href="/Voluntario/Editar?Id=@Model[i].Id">Alterar</a></td>
                         </tr>
                     }
                 </tbody>

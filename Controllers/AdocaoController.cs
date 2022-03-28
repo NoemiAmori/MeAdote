@@ -7,77 +7,80 @@ namespace Meadote.Controllers
     {
         public IActionResult Pets()
         {
-
             return View();
         }
         public IActionResult Cadastro()
         {
-
             return View();
         }
 
         [HttpPost]
         public IActionResult Cadastro(Adocao a)
         {
-            if (!string.IsNullOrEmpty(a.Animal) && !string.IsNullOrEmpty(a.Nome))
+            if (!string.IsNullOrEmpty(a.Nome) && !string.IsNullOrEmpty(a.Telefone) && !string.IsNullOrEmpty(a.Animal))
             {
-                AdocaoService adocaoService = new AdocaoService();
+                AdocaoService asv = new AdocaoService();
 
                 if (a.Id == 0)
                 {
-                    adocaoService.Inserir(a);
+                    asv.Inserir(a);
                 }
                 else
                 {
-                    adocaoService.Atualizar(a);
+                    asv.Atualizar(a);
                 }
 
                 return RedirectToAction("Listagem");
             }
+
             else
             {
-                ViewData["mensagem"] = "Campos obrigatórios! Preencha as informações solicitadas!!!";
+                ViewData["Mensagem"] = "Preencha todos os campos";
                 return View();
             }
         }
 
-            public IActionResult Listagem(string tipoFiltro, string filtro)
+        public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)
+        {
+            FiltrosAdocao objFiltro = null;
+            if (!string.IsNullOrEmpty(filtro))
             {
-                FiltrosAdocao objFiltro = null;
-                if (!string.IsNullOrEmpty(filtro))
-                {
-                    objFiltro = new FiltrosAdocao();
-                    objFiltro.Filtro = filtro;
-                    objFiltro.TipoFiltro = tipoFiltro;
-                }
-
-                AdocaoService adocaoService = new AdocaoService();
-                return View(adocaoService.ListarTodos(objFiltro));
+                objFiltro = new FiltrosAdocao();
+                objFiltro.Filtro = filtro;
+                objFiltro.TipoFiltro = tipoFiltro;
             }
 
-            //editar
-            public IActionResult Editar(int id)
-            {
-                AdocaoService adocaoService = new AdocaoService();
-                Adocao a = adocaoService.ObterPorId(id);
-                return View(a);
-            }
+            ViewData["adocoesPorPagina"] = (string.IsNullOrEmpty(itensPorPagina) ? 10 : int.Parse(itensPorPagina));
+            ViewData["PaginaAtual"] = (PaginaAtual != 0 ? PaginaAtual : 1);
 
-            public IActionResult Remover(int Id)
-            {
-                AdocaoService asv = new AdocaoService();
-                Adocao a = asv.ObterPorId(Id);
+            AdocaoService asv = new AdocaoService();
+            return View(asv.ListarTodos(objFiltro));
+        }
 
-                return View(a);
-            }
+        //editar
+        public IActionResult Editar(int id)
+        {
+            AdocaoService asv = new AdocaoService();
+            Adocao a = asv.ObterPorId(id);
+            return View(a);
+        }
 
-            [HttpPost]
-            public IActionResult Remover(Adocao a)
-            {
-                AdocaoService asv = new AdocaoService();
-                asv.Deletar(a);
+        public IActionResult Remover(int Id)
+        {
+            AdocaoService asv = new AdocaoService();
+            Adocao a = asv.ObterPorId(Id);
 
-                return RedirectToAction("Listagem");
-            }
+            return View(a);
+        }
+
+        [HttpPost]
+        public IActionResult Remover(Adocao a)
+        {
+            AdocaoService asv = new AdocaoService();
+            asv.Deletar(a);
+
+            return RedirectToAction("Listagem");
         }
     }
+}
+

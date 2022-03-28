@@ -10,48 +10,47 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: #e3f2fd;">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="container">
-                    <div class="row justify-content-md-center">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-area="" asp-controller="Home"
-                                    asp-action="Index">HOME</a>
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-area="" asp-controller="Home"
-                                    asp-action="Somos">QUEM
-                                    SOMOS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-area="" asp-controller="Adocao"
-                                    asp-action="Pets">PETS PARA
-                                    ADOÇÃO</a></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-area="" asp-controller="Voluntario"
-                                    asp-action="Cadastro">SEJA
-                                    VOLUNTÁRIO</a></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-primary" asp-area="" asp-controller="Fale"
-                                    asp-action="Cadastro">FALE
-                                    CONOSCO</a>
-                            </li>
-                        </ul>
-                    </div>
+     <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar navbar-light border-bottom box-shadow mb-3" style="background-color: #e3f2fd;">
+            <div class="container">
+                <a class="nav-link text-primary" href="/Home/Index" id="Index">ME ADOTE</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="nav-link text-primary" href="/Home/Somos" id="Somos">QUEM SOMOS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-primary" href="/Adocao/Pets" id="menuAdocao">PETS PARA ADOÇÃO</a>
+                             <div class="dropdown-menu" aria-labelledby="menuAdocao">
+                                <a class="dropdown-item" href="/Adocao/Listagem">Listagem</a>
+                                <a class="dropdown-item" href="/Adocao/Cadastro">Cadastro</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-primary dropdown-toggle" data-toggle="dropdown" href="#">FALE CONOSCO</a>
+                            <div class="dropdown-menu" aria-labelledby="menuFale">
+                                <a class="dropdown-item" href="/Fale/Listagem">Listagem</a>
+                                <a class="dropdown-item" href="/Fale/Cadastro">Cadastro</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-primary dropdown-toggle" data-toggle="dropdown" href="#">SEJA VOLUNTARIO</a>
+                            <div class="dropdown-menu" aria-labelledby="menuFale">
+                                <a class="dropdown-item" href="/Voluntario/Listagem">Listagem</a>
+                                <a class="dropdown-item" href="/Voluntario/Cadastro">Cadastro</a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-
 
     <div class="container">
         <main role="main" class="pb-3">

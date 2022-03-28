@@ -14,5 +14,6 @@ namespace Meadote.Models
         public DbSet<Fale> Fales {get; set;}
 
         public DbSet<Voluntario> Voluntarios {get; set;}
+
     }
 }
