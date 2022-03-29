@@ -187,3 +187,10 @@ C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cuidados.cshtml.g.cs
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Castle.Core.dll
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.File.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Sinks.Async.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
