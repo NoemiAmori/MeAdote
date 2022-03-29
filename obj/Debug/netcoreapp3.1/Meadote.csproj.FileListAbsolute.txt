@@ -185,3 +185,5 @@ C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\obj\Debug\netcoreapp3.1\Meadote.pdb
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\obj\Debug\netcoreapp3.1\Meadote.genruntimeconfig.cache
 C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\obj\Debug\netcoreapp3.1\Razor\Views\Home\Cuidados.cshtml.g.cs
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\noemi\Desktop\SENAC\MODULO II\UC 08 - PROJETO INTEGRADOR\NOEMI_ET07_PI\Meadote\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
