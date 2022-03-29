@@ -28,5 +28,10 @@ namespace Meadote.Controllers
         {
             return View();
         }
+
+        public IActionResult Cuidados()
+        {
+            return View();
+        }
     }
 }

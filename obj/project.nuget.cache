@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iF1nPtUaPhfWfaXjosgPrz/CkhDSiy5bKXy0Srr3CivarMetwIqngES925z8b7BSUn2JaHkDu5zsC+uwtFS89Q==",
+  "dgSpecHash": "6IlFVlESxbuZTjxlMekgRhfbOdioORFrKdJMTSshJFINbkiOzA+mWiFzfTIKKVrL77aXSc8OicBIF47DPkkxAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET06_PI\\Meadote\\Meadote.csproj",
+  "projectFilePath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Meadote.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noemi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\noemi\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
