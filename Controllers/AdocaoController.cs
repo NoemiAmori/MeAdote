@@ -1,10 +1,19 @@
 using Microsoft.AspNetCore.Mvc;
 using Meadote.Models;
+using Microsoft.Extensions.Logging;
+using System;
 
 namespace Meadote.Controllers
 {
     public class AdocaoController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public AdocaoController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+        
         public IActionResult Pets()
         {
             return View();
@@ -20,7 +29,7 @@ namespace Meadote.Controllers
             if (!string.IsNullOrEmpty(a.Nome) && !string.IsNullOrEmpty(a.Telefone) && !string.IsNullOrEmpty(a.Animal))
             {
                 AdocaoService asv = new AdocaoService();
-
+                
                 if (a.Id == 0)
                 {
                     asv.Inserir(a);
@@ -29,7 +38,6 @@ namespace Meadote.Controllers
                 {
                     asv.Atualizar(a);
                 }
-
                 return RedirectToAction("Listagem");
             }
 
@@ -39,6 +47,7 @@ namespace Meadote.Controllers
                 return View();
             }
         }
+
 
         public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)
         {

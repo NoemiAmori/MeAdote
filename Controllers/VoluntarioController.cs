@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Meadote.Models;
 
 namespace Meadote.Controllers
@@ -34,6 +33,7 @@ namespace Meadote.Controllers
                 }
 
                 return RedirectToAction("Listagem");
+
             }
             else
             {

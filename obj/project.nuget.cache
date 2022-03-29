@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "YAff51kcG0bp022/6rJOq9faxWakI5YRWTO8kxEu86/Sxlv9F0nge7Ns7/F/aeikzQ6C9zw7mA37Z0oqkuo/qQ==",
+  "dgSpecHash": "k1rFnOHBd35C+of4P/Ivjlhw0jKNEqUZaaJhJkHyfz9JTmpIMSmXRAx/0Ji+ps9PlP061OqksZobHJqnO1B/gA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Meadote.csproj",
+  "projectFilePath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Meadote.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\noemi\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\noemi\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

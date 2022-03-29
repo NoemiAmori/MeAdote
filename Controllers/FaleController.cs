@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using Meadote.Models;
 
 namespace Meadote.Controllers
@@ -21,15 +15,15 @@ namespace Meadote.Controllers
         {
             if (!string.IsNullOrEmpty(f.Nome) && !string.IsNullOrEmpty(f.Email))
             {
-                FaleService faleService = new FaleService();
+                FaleService fs = new FaleService();
 
                 if (f.Id == 0)
                 {
-                    faleService.Inserir(f);
+                    fs.Inserir(f);
                 }
                 else
                 {
-                    faleService.Atualizar(f);
+                    fs.Atualizar(f);
                 }
                 return RedirectToAction("Listagem");
             }
