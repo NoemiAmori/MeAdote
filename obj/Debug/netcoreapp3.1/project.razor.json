@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Meadote.csproj",
+  "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Meadote.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,98 +14402,98 @@
   "RootNamespace": "Meadote",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Fale\\Cadastro.cshtml",
-      "TargetPath": "Views\\Fale\\Cadastro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Home\\Somos.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Home\\Somos.cshtml",
       "TargetPath": "Views\\Home\\Somos.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Voluntario\\Editar.cshtml",
-      "TargetPath": "Views\\Voluntario\\Editar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Adocao\\Editar.cshtml",
-      "TargetPath": "Views\\Adocao\\Editar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Voluntario\\Cadastro.cshtml",
-      "TargetPath": "Views\\Voluntario\\Cadastro.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Fale\\Editar.cshtml",
-      "TargetPath": "Views\\Fale\\Editar.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Home\\Cuidados.cshtml",
-      "TargetPath": "Views\\Home\\Cuidados.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Adocao\\Listagem.cshtml",
-      "TargetPath": "Views\\Adocao\\Listagem.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Voluntario\\Listagem.cshtml",
-      "TargetPath": "Views\\Voluntario\\Listagem.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Fale\\Editar.cshtml",
+      "TargetPath": "Views\\Fale\\Editar.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Adocao\\Pets.cshtml",
-      "TargetPath": "Views\\Adocao\\Pets.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Fale\\Listagem.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Fale\\Listagem.cshtml",
       "TargetPath": "Views\\Fale\\Listagem.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Voluntario\\Editar.cshtml",
+      "TargetPath": "Views\\Voluntario\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Home\\Cuidados.cshtml",
+      "TargetPath": "Views\\Home\\Cuidados.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Adocao\\Remover.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Fale\\Cadastro.cshtml",
+      "TargetPath": "Views\\Fale\\Cadastro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Adocao\\Pets.cshtml",
+      "TargetPath": "Views\\Adocao\\Pets.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Adocao\\Remover.cshtml",
       "TargetPath": "Views\\Adocao\\Remover.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\Adocao\\Cadastro.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Voluntario\\Listagem.cshtml",
+      "TargetPath": "Views\\Voluntario\\Listagem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Adocao\\Listagem.cshtml",
+      "TargetPath": "Views\\Adocao\\Listagem.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Adocao\\Editar.cshtml",
+      "TargetPath": "Views\\Adocao\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Adocao\\Cadastro.cshtml",
       "TargetPath": "Views\\Adocao\\Cadastro.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Views\\Voluntario\\Cadastro.cshtml",
+      "TargetPath": "Views\\Voluntario\\Cadastro.cshtml",
       "FileKind": "mvc"
     }
   ],

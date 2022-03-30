@@ -1,10 +1,18 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using Meadote.Models;
 
 namespace Meadote.Controllers
 {
     public class FaleController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public FaleController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult Cadastro()
         {
             return View();
@@ -13,7 +21,7 @@ namespace Meadote.Controllers
         [HttpPost]
         public IActionResult Cadastro(Fale f)
         {
-            if (!string.IsNullOrEmpty(f.Nome) && !string.IsNullOrEmpty(f.Email))
+            try
             {
                 FaleService fs = new FaleService();
 
@@ -25,12 +33,12 @@ namespace Meadote.Controllers
                 {
                     fs.Atualizar(f);
                 }
-                return RedirectToAction("Listagem");
+                return Json(new { status = "Cadastro Realizado com sucesso" });
             }
-            else
+            catch (Exception e)
             {
-                ViewData["Mensagem"] = "Preencha todos os campos";
-                return View();
+                _logger.LogError("Erro " + e.Message);
+                return Json(new { status = "Erro", mensagem = "Falha ao gravar" });
             }
         }
         public IActionResult Listagem(string tipoFiltro, string filtro, string itensPorPagina, int NumDaPagina, int PaginaAtual)

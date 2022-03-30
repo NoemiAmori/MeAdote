@@ -1,15 +1,19 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
 using Meadote.Models;
+
 
 namespace Meadote.Controllers
 {
     public class VoluntarioController : Controller
     {
+        private readonly ILogger<HomeController> _logger;
+
+        public VoluntarioController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
         public IActionResult Cadastro()
         {
             return View();
@@ -19,7 +23,7 @@ namespace Meadote.Controllers
 
         public IActionResult Cadastro(Voluntario v)
         {
-            if (!string.IsNullOrEmpty(v.Nome) && !string.IsNullOrEmpty(v.Telefone) && !string.IsNullOrEmpty(v.Email))
+            try
             {
                 VoluntarioService vs = new VoluntarioService();
 
@@ -32,13 +36,13 @@ namespace Meadote.Controllers
                     vs.Atualizar(v);
                 }
 
-                return RedirectToAction("Listagem");
-
+                return Json(new { status = "Cadastro Realizado com sucesso" });
+                
             }
-            else
+            catch (Exception e)
             {
-                ViewData["Mensagem"] = "Preencha todos os campos";
-                return View();
+                _logger.LogError("Erro " + e.Message);
+                return Json(new { status = "Erro", mensagem = "Falha ao gravar" });
             }
         }
 

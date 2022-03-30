@@ -6202,11 +6202,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Meadote.csproj",
+      "projectUniqueName": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Meadote.csproj",
       "projectName": "Meadote",
-      "projectPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\Meadote.csproj",
+      "projectPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\Meadote.csproj",
       "packagesPath": "C:\\Users\\noemi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\Meadote\\obj\\",
+      "outputPath": "C:\\Users\\noemi\\Desktop\\SENAC\\MODULO II\\UC 08 - PROJETO INTEGRADOR\\NOEMI_ET07_PI\\Meadote\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\noemi\\AppData\\Roaming\\NuGet\\NuGet.Config"
